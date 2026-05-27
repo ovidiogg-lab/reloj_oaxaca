@@ -8,24 +8,20 @@
     <style>
        /* Fondo general con imagen a pantalla completa */
         body {
-            /* 1. Imagen de fondo */
-          background-image: url('fondo.png?v=1');
-            
-            /* 2. Control total de la pantalla completa sin deformar */
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            
-            /* 3. Alineación del reloj */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: sans-serif;
-            overflow: hidden; /* Evita que salgan barras de navegación en la pantalla */
-        }
-
+    /* Agrega este degradado oscuro antes de la imagen para crear un filtro protector uniforme */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('fondo.png'); 
+    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
 /* Contenedor principal alineado estrictamente por la base de los números */
 .reloj-contenedor-mexico {
     display: flex;
