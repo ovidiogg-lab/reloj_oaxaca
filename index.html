@@ -926,7 +926,7 @@
             // Separamos las horas y los minutos
             const [h, m] = tiempoFormateado.split(':');
 
-            // CORREGIDO: Cambiado 'disonosNumeros' por 'disenosNumeros'
+            // USANDO EL NOMBRE CORRECTO: disenosNumeros
             document.getElementById('hora-decena').innerHTML = disenosNumeros[h[0]] || '';
             document.getElementById('hora-unidad').innerHTML = disenosNumeros[h[1]] || '';
             document.getElementById('minuto-decena').innerHTML = disenosNumeros[m[0]] || '';
