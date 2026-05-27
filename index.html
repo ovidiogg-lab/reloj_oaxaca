@@ -918,19 +918,19 @@
         };
         
 
-        function actualizarRelojVectores() {
+      function actualizarRelojVectores() {
             const ahora = new Date();
             const opciones = { timeZone: 'America/Mexico_City', hour: '2-digit', minute: '2-digit', hour12: false };
             const tiempoFormateado = ahora.toLocaleTimeString('es-MX', opciones);
             
-            // Separamos solo las horas y los minutos
+            // Separamos las horas y los minutos
             const [h, m] = tiempoFormateado.split(':');
 
-            // Actualizamos los contenedores existentes en tu pantalla
-            document.getElementById('hora-decena').innerHTML = disonosNumeros[h[0]];
-            document.getElementById('hora-unidad').innerHTML = disonosNumeros[h[1]];
-            document.getElementById('minuto-decena').innerHTML = disonosNumeros[m[0]];
-            document.getElementById('minuto-unidad').innerHTML = disonosNumeros[m[1]];
+            // CORREGIDO: Cambiado 'disonosNumeros' por 'disenosNumeros'
+            document.getElementById('hora-decena').innerHTML = disenosNumeros[h[0]] || '';
+            document.getElementById('hora-unidad').innerHTML = disenosNumeros[h[1]] || '';
+            document.getElementById('minuto-decena').innerHTML = disenosNumeros[m[0]] || '';
+            document.getElementById('minuto-unidad').innerHTML = disenosNumeros[m[1]] || '';
         }
 
         // Ejecución inicial y ciclo de automatización cada segundo
